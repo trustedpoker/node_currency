@@ -1,4 +1,4 @@
-import { createContext as L, useContext as ee, memo as h, useState as E, useEffect as X, useCallback as le, useMemo as z, useRef as tn, Fragment as mt } from "react";
+import { createContext as D, useContext as ee, memo as h, useState as E, useEffect as X, useCallback as le, useMemo as z, useRef as tn, Fragment as mt } from "react";
 import { IC_HOST as Ne, IsDev as Y, queryKeyFactory as se, matchRustEnum as R, BigIntToString as wt, BigIntToBig as nn, BigToBigInt as an, UserError as v, useQuery as Z, useToast as qe, useMutation as Q, WalletTypeNotInstalledError as $n, usePersistentState as de, ListItem as k, Image as rn, LoadingAnimationComponent as Ee, List as F, ErrorComponent as ce, FormComponent as e2, Interactable as gt, Modal as bt, TitleTextComponent as t2, DateToBigIntTimestamp as cn, useIsInList as n2, NumberInputComponent as on, ModalTitlePortal as He, TextInputComponent as xt, SwitchInputComponent as sn, DropdownInputComponent as Oe, CopiableTextComponent as Qe, LoadingSpinnerComponent as ln, QRCodeComponent as a2, Label as r2, TabsComponent as dn, ModalFooterPortal as Ze, ButtonComponent as q, useIsMobile as An, FauxLoadingBarAnimationComponent as c2, useConfirmModal as i2, DropdownComponent as o2, ModalBackButtonPortal as s2 } from "@zk-game-dao/ui";
 import { AuthAdapter as l2 } from "@web3auth/auth-adapter";
 import { WEB3AUTH_NETWORK as Rt, CHAIN_NAMESPACES as d2, WALLET_ADAPTERS as Jt } from "@web3auth/base";
@@ -26,7 +26,7 @@ import { animate as M2, AnimatePresence as hn } from "framer-motion";
 import { CkBTCMinterCanister as S2 } from "@dfinity/ckbtc";
 import G2 from "@mempool/mempool.js";
 import { useQuery as Ve } from "@tanstack/react-query";
-const vn = L({
+const vn = D({
   login: async () => {
   },
   loginFactory: () => async () => {
@@ -36,7 +36,7 @@ const vn = L({
   requireLogin: async () => {
     throw new Error("Require login not implemented");
   }
-}), W = () => ee(vn), je = import.meta.env.VITE_IC_HOST ?? void 0 ?? Ne, R2 = Y ? `http://${import.meta.env.CANISTER_ID_INTERNET_IDENTITY}.localhost:4943/` : "https://identity.ic0.app", Wt = Y ? "BK_fxc0tSnRyrjvB-vyy4LIA8wuFjHXXKjLKt5c9ZjtoZbU_5123z2vtbKQ037vfcp3189Hc6yH7HG6sYPaxJ0Q" : "BLNGdSp4e8zpui5g2VRVm9533eUVL7XughrH0PDTsOU0n3h3163HXJxstQpTHvSqaRvFMKOimvaV6cLWEnGlr88", J2 = Ne, W2 = Y ? Rt.SAPPHIRE_DEVNET : Rt.SAPPHIRE_MAINNET, ht = [
+}), W = () => ee(vn), je = import.meta.env.VITE_IC_HOST ?? void 0 ?? Ne, R2 = Y ? `http://${import.meta.env.CANISTER_ID_INTERNET_IDENTITY}.localhost:4943/` : "https://identity.ic0.app", Wt = Y ? "BJbP2vVuQvVne9QC7GnsCnstay0grZKIWa0iAg-E7WWnMj9ua-SXnU5aEM2w7N93jsMiW4DSB4l12wlUH46EeBc" : "BJ5MVY5dVC1SERMgJv-0jZh7cyJBmmo_4QrSKAYILLO0YE3MOBnOHD3yQ6PysFkCeq3Di7pwrEWVJiVXj0IVJZI", J2 = Ne, W2 = Y ? Rt.SAPPHIRE_DEVNET : Rt.SAPPHIRE_MAINNET, ht = [
   "google",
   "line",
   "twitter",
@@ -158,7 +158,7 @@ const vn = L({
   });
 };
 Yt && F2(Yt);
-const Tn = L(
+const Tn = D(
   null
 ), Ke = () => ee(Tn), dr = (e) => (parseInt(e) / 1e18).toFixed(2), Ar = (e) => (e * 1e18).toString(16), H2 = h(({ children: e }) => {
   const [t, n] = E({}), [r, c] = E(null), [i, l] = E({}), [o, A] = E(""), s = () => A(""), d = (u) => A(u);
@@ -560,10 +560,10 @@ const V2 = (e) => R(e)({
     TxDuplicate: e.Record({ duplicate_of: U }),
     TxCreatedInFuture: e.Null,
     InsufficientFunds: e.Record({ balance: i })
-  }), Ln = e.Variant({
+  }), Dn = e.Variant({
     Ok: U,
     Err: ft
-  }), Dn = e.Record({}), _n = e.Record({ transfer_fee: i });
+  }), Ln = e.Record({}), _n = e.Record({ transfer_fee: i });
   return e.Service({
     account_balance: e.Func([f], [i], ["query"]),
     account_balance_dfx: e.Func(
@@ -627,10 +627,10 @@ const V2 = (e) => R(e)({
     ),
     send_dfx: e.Func([pt], [U], []),
     symbol: e.Func([], [e.Record({ symbol: e.Text })], ["query"]),
-    transfer: e.Func([ut], [Ln], []),
-    transfer_fee: e.Func([Dn], [_n], ["query"])
+    transfer: e.Func([ut], [Dn], []),
+    transfer_fee: e.Func([Ln], [_n], ["query"])
   });
-}, L2 = ({ IDL: e }) => {
+}, D2 = ({ IDL: e }) => {
   const t = e.Rec(), n = e.Rec(), r = e.Rec(), c = e.Record({
     num_blocks_to_archive: e.Opt(e.Nat64),
     max_transactions_per_response: e.Opt(e.Nat64),
@@ -995,7 +995,7 @@ const V2 = (e) => R(e)({
     ),
     is_ledger_ready: e.Func([], [e.Bool], ["query"])
   });
-}, pr = (e, t) => an(e, t.decimals), D2 = (e, t) => nn(e, t.decimals), Ae = (e, t, n = !1) => {
+}, pr = (e, t) => an(e, t.decimals), L2 = (e, t) => nn(e, t.decimals), Ae = (e, t, n = !1) => {
   if (n)
     return wt(e, t.decimals, t.decimals).toString();
   if ("decimals" in t) {
@@ -1147,7 +1147,7 @@ const V2 = (e) => R(e)({
     amount: n
   });
 }, t0 = Ne, n0 = (e) => {
-  const { authData: t } = W(), n = D();
+  const { authData: t } = W(), n = L();
   return Z({
     queryKey: [
       "currencyManager",
@@ -1171,7 +1171,7 @@ const V2 = (e) => R(e)({
     );
   return t;
 }, ue = (e) => {
-  const t = D();
+  const t = L();
   return Z({
     queryKey: [
       "currencyManagerMeta",
@@ -1340,7 +1340,7 @@ const V2 = (e) => R(e)({
       children: /* @__PURE__ */ a(Qt, { ...r })
     }
   )
-), Le = (e) => ue(e).transactionFee, s0 = Ne, En = L({
+), De = (e) => ue(e).transactionFee, s0 = Ne, En = D({
   setWalletType: () => {
   }
 }), l0 = (e, t) => "ICP" in e ? {
@@ -1351,10 +1351,10 @@ const V2 = (e) => R(e)({
   }).toHex()
 } : {
   methodName: "icrc1_transfer",
-  idl: L2,
+  idl: D2,
   destination: t
 }, Et = () => ee(En), Pn = (e, t, n) => {
-  const { walletType: r } = Et(), c = Le(e), { addToast: i } = qe();
+  const { walletType: r } = Et(), c = De(e), { addToast: i } = qe();
   return Q({
     mutationFn: async (l) => {
       if (!r) throw new v("Wallet not found");
@@ -1434,7 +1434,7 @@ const V2 = (e) => R(e)({
       });
     }
   });
-}, Mn = L({
+}, Mn = D({
   setAllowance: async () => {
     throw new Error("Context not provided");
   },
@@ -1591,7 +1591,7 @@ const V2 = (e) => R(e)({
     isFetched: !0
   }
 }), w0 = async (e, t) => {
-  const n = D();
+  const n = L();
   return R(t)({
     Fake: async () => Ue(n),
     Real: (r) => Xe(e, r)
@@ -1826,7 +1826,7 @@ function Ut(e) {
   const t = e.toText(), n = M.fromText(t), c = x2.fromPrincipal(n).toUint8Array();
   return "0x" + Buffer.from(c).toString("hex");
 }
-const Wn = L({
+const Wn = D({
   isNativeShown: !0,
   setIsNativeShown: () => {
   },
@@ -2090,7 +2090,7 @@ const Wn = L({
       }
     );
   }
-), Lt = h(({
+), Dt = h(({
   children: e,
   fallback: t,
   network: n
@@ -2244,8 +2244,8 @@ const Wn = L({
   const { loginFactory: t, error: n, isLoggingIn: r } = W();
   return /* @__PURE__ */ w(bt, { open: !0, onClose: e, children: [
     /* @__PURE__ */ a(t2, { title: "Sign in", text: "Choose a method to sign in" }),
-    /* @__PURE__ */ a(Lt, { network: "btc", children: /* @__PURE__ */ a(U0, {}) }),
-    /* @__PURE__ */ w(Lt, { network: "ic", children: [
+    /* @__PURE__ */ a(Dt, { network: "btc", children: /* @__PURE__ */ a(U0, {}) }),
+    /* @__PURE__ */ w(Dt, { network: "ic", children: [
       /* @__PURE__ */ a(
         q0,
         {
@@ -2440,7 +2440,7 @@ const Wn = L({
     l && /* @__PURE__ */ a(K0, { onClose: () => l.onError(new Error("User cancelled")) }),
     e
   ] });
-}), L0 = M.fromText(
+}), D0 = M.fromText(
   Y ? "be2us-64aaa-aaaaa-qaabq-cai" : "j2let-saaaa-aaaam-qds2q-cai"
 ), Mt = async (e, t) => {
   if ("Fake" in e) return 0n;
@@ -2467,7 +2467,7 @@ const Wn = L({
     refetchInterval: 5e3
   });
   return z(() => n, [n]);
-}, D0 = (e) => {
+}, L0 = (e) => {
   const { authData: t } = W(), n = fe(e);
   return le(
     async (r, c) => {
@@ -2482,7 +2482,7 @@ const Wn = L({
     [n]
   );
 }, Cr = (e, t) => {
-  const { authData: n } = W(), r = D0({ Real: e });
+  const { authData: n } = W(), r = L0({ Real: e });
   return Q({
     mutationFn: async (c) => {
       if (!t) throw new v("Recipient not found");
@@ -2522,7 +2522,7 @@ const Wn = L({
   });
   return z(() => n, [n]);
 }, Vn = (e) => {
-  const { authData: t } = W(), n = ee(Mn), r = fe(e?.currencyType ?? { Real: { ICP: null } }), c = Hn(e), i = Le(
+  const { authData: t } = W(), n = ee(Mn), r = fe(e?.currencyType ?? { Real: { ICP: null } }), c = Hn(e), i = De(
     e?.currencyType ?? { Real: { ICP: null } }
   );
   return z(
@@ -2588,7 +2588,7 @@ const Wn = L({
     ),
     /* @__PURE__ */ a(k, { children: "Principal" })
   ] });
-}), Dt = h(
+}), Lt = h(
   ({
     currencyType: e,
     onChange: t,
@@ -2619,7 +2619,7 @@ const Wn = L({
       }
     );
   }
-), jn = L({
+), jn = D({
   enabledNetworks: [],
   selectedCurrency: { ICP: null },
   setSelectedCurrency: () => {
@@ -2638,17 +2638,17 @@ const Wn = L({
     }, [l, c]);
     return /* @__PURE__ */ a(jn.Provider, { value: { isBTC: c, enabledNetworks: r, selectedCurrency: o, setSelectedCurrency: A }, children: e });
   }
-), De = () => ee(jn), $0 = () => {
-  const e = De();
+), Le = () => ee(jn), $0 = () => {
+  const e = Le();
   return z(() => e.enabledNetworks, [e.enabledNetworks]);
-}, ea = (e) => e.length === 1 && e.includes("btc"), D = () => {
-  const e = De().isBTC;
+}, ea = (e) => e.length === 1 && e.includes("btc"), L = () => {
+  const e = Le().isBTC;
   return z(() => e, [e]);
 }, Br = () => {
-  const { selectedCurrency: e } = De();
+  const { selectedCurrency: e } = Le();
   return z(() => e, [T.serialize(e)]);
 }, br = () => {
-  const { setSelectedCurrency: e } = De();
+  const { setSelectedCurrency: e } = Le();
   return le((t) => e(t), [e]);
 }, _t = "https://icrc-api.internetcomputer.org/api/v2/ledgers?limit=100", ta = [
   "ICP",
@@ -2661,7 +2661,7 @@ const Wn = L({
   "ckUSDT",
   "ckETH",
   "ckBTC"
-], Qn = L({
+], Qn = D({
   highlightedCurrencies: [],
   allCurrencies: [],
   addCurrency: () => {
@@ -2705,7 +2705,7 @@ const Wn = L({
   },
   initialData: []
 }), ra = h(({ children: e }) => {
-  const [t, n] = E(na()), r = D(), c = (s) => {
+  const [t, n] = E(na()), r = L(), c = (s) => {
     n((d) => [...d, s].filter((f, g, u) => u.findIndex((p) => T.serialize(p) === T.serialize(f)) === g));
   }, i = (s) => {
     n((d) => d.filter((f) => T.serialize(f) !== T.serialize(s)));
@@ -2743,7 +2743,7 @@ const Wn = L({
     }
   );
 }), _e = () => ee(Qn), St = h(({ onClose: e, isOpen: t, onSelect: n }) => {
-  const r = _e(), { addCurrency: c, removeCurrency: i } = r, [l, o] = E(), A = D(), { data: s, isPending: d, isFetching: f, ...g } = Zn(l), u = z(() => {
+  const r = _e(), { addCurrency: c, removeCurrency: i } = r, [l, o] = E(), A = L(), { data: s, isPending: d, isFetching: f, ...g } = Zn(l), u = z(() => {
     let p = l ? s : [
       ...r.allCurrencies,
       ...s
@@ -2795,7 +2795,7 @@ const Wn = L({
     "add-token-modal"
   );
 }), xr = h(({ label: e, value: t, onChange: n }) => {
-  const r = z(() => t && K.serialize(t), [t]), c = (d) => n(d ? K.deserialize(d) : void 0), { highlightedCurrencies: i, addCurrency: l } = _e(), [o, A] = E(!1), s = D();
+  const r = z(() => t && K.serialize(t), [t]), c = (d) => n(d ? K.deserialize(d) : void 0), { highlightedCurrencies: i, addCurrency: l } = _e(), [o, A] = E(!1), s = L();
   return X(() => {
     s && n({ Real: { BTC: null } });
   }, [s]), s ? null : /* @__PURE__ */ w(x, { children: [
@@ -2841,7 +2841,7 @@ const Wn = L({
       t(f.Real);
     } else
       t(void 0);
-  }, [i, l] = E(!1), { highlightedCurrencies: o, addCurrency: A } = _e(), s = D();
+  }, [i, l] = E(!1), { highlightedCurrencies: o, addCurrency: A } = _e(), s = L();
   return X(() => {
     s && t({ BTC: null });
   }, [s]), s ? null : /* @__PURE__ */ w(x, { children: [
@@ -2967,7 +2967,7 @@ const Wn = L({
       children: "Receiver Account ID"
     }
   ) : null : null
-), Un = L(null), Ge = () => ee(Un), sa = h(({ currency: e }) => {
+), Un = D(null), Ge = () => ee(Un), sa = h(({ currency: e }) => {
   const { web3WalletType: t, setWeb3WalletType: n, mode: r, web3WithdrawExternalWalletAddress: c, setWeb3WithdrawExternalWalletAddress: i } = Ge(), l = Se(e), { selectedWallet: o, wallets: A, connectWallet: s } = Ke();
   return l ? Object.keys(A).length === 0 ? /* @__PURE__ */ w("p", { className: "text-left type-subheadline pl-4", children: [
     "Please install ",
@@ -3037,7 +3037,7 @@ const Wn = L({
     ] })
   ] });
 }), Aa = h(({ currency: e }) => {
-  const { amount: t, setAmount: n, mode: r } = Ge(), c = Le({ Real: e }), { meta: { thousands: i } } = a0({ Real: e }), l = fe({ Real: e }), o = Se(e), { selectedWallet: A } = Ke(), s = P0(), d = ue({ Real: e }), f = z(() => "CKETHToken" in e && "ETH" in e.CKETHToken, [e]);
+  const { amount: t, setAmount: n, mode: r } = Ge(), c = De({ Real: e }), { meta: { thousands: i } } = a0({ Real: e }), l = fe({ Real: e }), o = Se(e), { selectedWallet: A } = Ke(), s = P0(), d = ue({ Real: e }), f = z(() => "CKETHToken" in e && "ETH" in e.CKETHToken, [e]);
   return s ? /* @__PURE__ */ w(x, { children: [
     o && /* @__PURE__ */ a(da, { currency: e }),
     /* @__PURE__ */ w(F, { children: [
@@ -3048,7 +3048,7 @@ const Wn = L({
           value: Number(t) / i,
           onChange: (g) => n(BigInt(Math.floor(g * i))),
           min: 0,
-          max: r === "deposit" ? void 0 : D2(
+          max: r === "deposit" ? void 0 : L2(
             l,
             d
           ),
@@ -3388,7 +3388,7 @@ const Wn = L({
         "lazereyes-switch"
       ),
       n === "withdraw" && /* @__PURE__ */ a(
-        Dt,
+        Lt,
         {
           currencyType: { Real: { BTC: null } },
           label: "Amount",
@@ -3404,7 +3404,7 @@ const Wn = L({
         /* @__PURE__ */ a(J, { className: "flex mx-1", currencyType: { Real: { BTC: null } }, currencyValue: p.data.retrieve_btc_min_amount })
       ] }),
       n === "deposit" && s && /* @__PURE__ */ a(
-        Dt,
+        Lt,
         {
           currencyType: { Real: { BTC: null } },
           label: "Amount",
@@ -3536,7 +3536,7 @@ const Wn = L({
   ), p = z(
     () => n ? "deposit" : g,
     [g, n]
-  ), m = Le(c ? { Real: c } : { Fake: null }), [C, y] = de("web3-wallet-type", o.walletType ?? "plug"), [
+  ), m = De(c ? { Real: c } : { Fake: null }), [C, y] = de("web3-wallet-type", o.walletType ?? "plug"), [
     b,
     B
   ] = de("web3-preferredWithdrawExternalWalletAddress", ""), O = Se(c || { ICP: null });
@@ -3661,7 +3661,7 @@ A balance of ${Ae(
     }
   ) : /* @__PURE__ */ a("p", { children: "No principal or account found" });
 }), Er = h(({ onBack: e, onSubmit: t, requiredBalance: n }) => {
-  const r = D(), [c, i] = E(
+  const r = L(), [c, i] = E(
     n?.currencyType === void 0 || "Fake" in n.currencyType ? void 0 : n?.currencyType.Real
   ), l = z(() => r ? { BTC: null } : c, [c, r]), { authData: o } = W(), [A, s] = E(!1), d = _e();
   return o ? /* @__PURE__ */ w(
@@ -3802,7 +3802,7 @@ A balance of ${Ae(
     ),
     e
   ] });
-}), za = L({
+}), za = D({
   updateBalance: async () => {
   }
 }), ka = h(({ children: e }) => {
@@ -3827,7 +3827,7 @@ A balance of ${Ae(
     }
   );
 }), Oa = h(
-  ({ children: e }) => D() ? /* @__PURE__ */ a(ka, { children: e }) : e
+  ({ children: e }) => L() ? /* @__PURE__ */ a(ka, { children: e }) : e
 ), en = "manual-wallet-type", Na = h(
   ({ children: e }) => {
     const [t, n] = E(
@@ -3852,7 +3852,7 @@ A balance of ${Ae(
   children: e,
   disabledNetworks: t,
   enabledNetworks: n,
-  siwbProviderCanisterId: r = L0
+  siwbProviderCanisterId: r = D0
 }) => /* @__PURE__ */ a(
   _0,
   {
@@ -3950,7 +3950,7 @@ A balance of ${Ae(
     Icon: h(f2),
     label: "Oyl"
   }
-}, In = L({
+}, In = D({
   loading: !1,
   clear: () => {
   },
@@ -3984,7 +3984,7 @@ A balance of ${Ae(
   );
 }), Sa = h(
   ({ children: e, siwbProviderCanisterId: t }) => {
-    const n = D();
+    const n = L();
     return /* @__PURE__ */ a(C2, { config: { network: T2 }, children: /* @__PURE__ */ a(
       u2,
       {
@@ -4038,7 +4038,7 @@ export {
   J as CurrencyComponent,
   o0 as CurrencyComponentInner,
   r0 as CurrencyIconComponent,
-  Dt as CurrencyInputComponent,
+  Lt as CurrencyInputComponent,
   Nt as CurrencyMetaIconComponent,
   T as CurrencySerializer,
   ve as CurrencyToString,
@@ -4082,7 +4082,7 @@ export {
   Aa as ReceiverSelectorComponent,
   K0 as SignupModalContentComponent,
   ht as SocialLoginProviders,
-  D2 as TokenAmountToBig,
+  L2 as TokenAmountToBig,
   Ae as TokenAmountToString,
   Vt as TokenSerializer,
   h0 as USDC_DECIMALS,
@@ -4124,16 +4124,16 @@ export {
   Fn as useChainFusionActor,
   Kt as useChainFusionAllowance,
   P0 as useChainFusionTransactionFees,
-  De as useCurrencyConfig,
+  Le as useCurrencyConfig,
   n0 as useCurrencyManager,
   ue as useCurrencyManagerMeta,
   Ke as useEIP6963,
   $0 as useEnabledNetworks,
-  D as useIsBTC,
+  L as useIsBTC,
   Yn as useIsChainFusionCurrency,
   Et as useManualWallet,
   Pn as useManualWalletTransfer,
-  D0 as useRequireBalance,
+  L0 as useRequireBalance,
   a0 as useRequiredCurrencyManager,
   Zn as useSearchCurrencies,
   Br as useSelectedCurrency,
@@ -4141,7 +4141,7 @@ export {
   br as useSetSelectedCurrency,
   Se as useShowingNativeCurrency,
   _e as useTokenRegistry,
-  Le as useTransactionFee,
+  De as useTransactionFee,
   Cr as useTransfer,
   Ge as useWalletModalContentContext,
   ge as web3auth
